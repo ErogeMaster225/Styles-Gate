@@ -1,3 +1,12 @@
+/* ==UserStyle==
+@name           Noz.vn
+@namespace      github.com/openstyles/stylus
+@version        0.1
+@description    A modern look for Voz.vn based on Nord colorscheme
+@author         ErogeMaster225
+@updateURL      https://github.com/ErogeMaster225/Styles-Gate/Noz.vn.user.css
+@preprocessor   stylus
+==/UserStyle== */
 @-moz-document domain("voz.vn") {
 @import "https://cdn.jsdelivr.net/gh/duyplus/fontawesome-pro/css/all.min.css";
 :root {
@@ -387,12 +396,12 @@ body[data-template="thread_view"] .p-body-main--withSidebar .p-body-content {
     height: 100%;
     border: 1px solid var(--blue1);
     border-radius: 16px;
-    border-left: 5px solid var(--blue1);
+    border-left: 8px solid var(--blue1);
     
 }
 .block--category5 .node-body {
     border: 1px solid var(--green);
-    border-left: 5px solid var(--green);
+    border-left: 8px solid var(--green);
     
 }
 .block--category5 .node-stats>dl.pairs.pairs--rows {
@@ -400,7 +409,7 @@ body[data-template="thread_view"] .p-body-main--withSidebar .p-body-content {
 }
 .block--category20 .node-body {
     border: 1px solid var(--yellow);
-    border-left: 5px solid var(--yellow);
+    border-left: 8px solid var(--yellow);
     
 }
 .block--category20 .node-stats>dl.pairs.pairs--rows {
@@ -408,7 +417,7 @@ body[data-template="thread_view"] .p-body-main--withSidebar .p-body-content {
 }
 .block--category46 .node-body {
     border: 1px solid var(--orange);
-    border-left: 5px solid var(--orange);
+    border-left: 8px solid var(--orange);
     
 }
 .block--category46 .node-stats>dl.pairs.pairs--rows {
@@ -416,7 +425,7 @@ body[data-template="thread_view"] .p-body-main--withSidebar .p-body-content {
 }
 .block--category89 .node-body {
     border: 1px solid var(--purple);
-    border-left: 5px solid var(--purple);
+    border-left: 8px solid var(--purple);
     
 }
 .block--category89 .node-stats>dl.pairs.pairs--rows {
@@ -424,7 +433,7 @@ body[data-template="thread_view"] .p-body-main--withSidebar .p-body-content {
 }
 .block--category16 .node-body {
     border: 1px solid var(--red);
-    border-left: 5px solid var(--red);
+    border-left: 8px solid var(--red);
     
 }
 .block--category16 .node-stats>dl.pairs.pairs--rows {
@@ -610,7 +619,7 @@ i:before {
     left: -10px;
     height: 70%;
     width: 5px;
-    background: #718096;
+    background: var(--dark3);
     border-radius: 15px;
     transform: translateY(-50%);
 }
