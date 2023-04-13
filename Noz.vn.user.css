@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Noz.vn
 @namespace      github.com/openstyles/stylus
-@version        0.2.1
+@version        0.2.2
 @description    A modern look for Voz.vn based on Nord colorscheme
 @author         ErogeMaster225
 @updateURL      https://github.com/ErogeMaster225/Styles-Gate/Noz.vn.user.css
@@ -43,7 +43,8 @@
     body[data-template="thread_view"] .p-body-sidebar,
     .message-userArrow, /* arrow on message box */
     .p-sectionLinks,
-    .contentRow-fader {
+    .contentRow-fader,
+	ins.adsbygoogle {
 		display: none !important;
 	}
 	/* Scroll bar (chromium only) */
@@ -138,7 +139,7 @@
                                                     *                  *
                                                     ********************
     */
-	.p-body-main {
+	body[data-template="forum_list"] .p-body-main {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
@@ -148,10 +149,7 @@
 	.p-body-inner {
 		margin: 0 auto;
 	}
-	body[data-template="thread_view"] .p-body-main--withSidebar .p-body-content {
-		max-width: 100%;
-	}
-	.p-body-main--withSidebar .p-body-content {
+	body[data-template="forum_list"] .p-body-main--withSidebar .p-body-content {
 		flex-grow: 1;
 		display: inline-block;
 		max-width: calc(100% - 310px);
@@ -377,14 +375,21 @@
 		content: "";
 		position: absolute;
 		width: 100%;
-		border-radius: 4px;
+		border-radius: 3px;
 		transform: scaleX(0);
-		height: 3px;
-		bottom: -5px;
 		left: 0;
 		background-color: currentColor;
 		transform-origin: bottom right;
 		transition: transform 250ms linear;
+	}
+	.node-title a::after {
+		height: 3px;
+		bottom: -5px;
+	}
+	.node-extra-title::after,
+	.node-extra-user a::after {
+		height: 1px;
+		bottom: 0px;
 	}
 	.node-title a:hover::after,
 	.node-extra-title:hover::after,
@@ -497,7 +502,9 @@
 	.message-signature {
 		border-top: none;
 	}
-	.message .reactionsBar {
+	.message .reactionsBar,
+	.message-responseRow.message-responseRow--likes.is-active,
+	.message-responseRow.message-responseRow--reactions.is-active {
 		border: none;
 		background: var(--dark0);
 		padding: 16px;
@@ -644,6 +651,45 @@
 		width: fit-content;
 		margin: 10px auto;
 		padding: 5px 10px;
+	}
+	.bbCodeBlock-expandLink {
+		position: relative;
+		top: unset;
+		height: 21px;
+	}
+	.bbCodeBlock-expandLink a {
+		bottom: 0;
+	}
+	.bbTable>table>thead>tr>td,
+	.bbTable>table>tbody>tr>td {
+		padding: 6px;
+		background: var(--dark1);
+		border: 2px solid var(--blue1);
+	}
+	/*
+                                                    ********************
+                                                    *                  *
+                                                    *      Search      *
+                                                    *                  *
+                                                    ********************
+    */
+	.contentRow-snippet {
+		color: var(--white0);
+		font-size: 1em;
+	}
+	.contentRow-snippet .textHighlight {
+		color: var(--blue0);
+	}
+	body[data-template="search_form"] .block-container,
+	.block-tabHeader.tabs.hScroller,
+	.formRow>dt {
+		background: none;
+	}
+	.block-tabHeader.tabs.hScroller {
+		background: none;
+	}
+	.block-tabHeader {
+		border: none;
 	}
 	/*
                                                     ********************
