@@ -1,0 +1,394 @@
+/* ==UserStyle==
+@name           StyleOverflow
+@namespace      github.com/openstyles/stylus
+@version        0.0.1
+@description    Modernize Stackoverflow
+@author         ErogeMaster225
+@preprocessor  stylus
+==/UserStyle== */
+
+@-moz-document domain("stackoverflow.com") {
+    /* Nord colorscheme */
+    :root {
+        /* Polar Night */
+        --dark0: #2e3440;
+        --dark1: #3b4252;
+        --dark2: #434c5e;
+        --dark3: #4c566a;
+        /* Snow Storm */
+        --white0: #d8dee9;
+        --white1: #e5e9f0;
+        --white2: #eceff4;
+        /* Frost */
+        --blue0: #8fbcbb;
+        --blue1: #88c0d0;
+        --blue2: #81a1c1;
+        --blue3: #5e81ac;
+        /* Aurora */
+        --red: #bf616a;
+        --orange: #d08770;
+        --yellow: #ebcb8b;
+        --green: #a3be8c;
+        --purple: #b48ead;
+    }
+    html,
+    body {
+        --ff-sans: "Roboto";
+        --ff-serif: "Roboto";
+        --ff-mono: "Iosevka Mayukai Codepro Semibold";
+        --fs-body1: 14px;
+        font-weight: 600;
+    }
+    body.unified-theme {
+        --theme-background-color: var(--dark1);
+        --theme-topbar-background-color: var(--dark0);
+        --theme-content-background-color: var(--dark1);
+        --theme-body-font-color: var(--white0);
+        --theme-body-font-color: var(--white0);
+        --highlight-bg: var(--dark0);
+        --theme-post-owner-background-color: var(--dark0);
+    }
+    .s-prose {
+        --_pr-code-fs: calc(1.15 * var(--fs-body1));
+    }
+    *::-webkit-scrollbar {
+		width: 1em;
+	}
+	*::-webkit-scrollbar-track {
+		background: var(--dark0);
+	}
+	*::-webkit-scrollbar-thumb {
+		background: var(--dark3);
+	}
+    #question-header .question-hyperlink {
+        color: var(--blue0);
+    }
+    footer.site-footer,
+    .s-notice,
+    .bottom-notice,
+    #left-sidebar,
+    .s-sidebarwidget,
+    .s-topbar,
+    #sidebar,
+    #your-answer-header,
+    #post-editor,
+    .form-submit,
+    .form-item.new-post-login,
+    .ml12 {
+        display: none !important;
+    }
+    #mainbar, .mainbar {
+        width: 100%;
+    }
+    body {
+        padding-top: 0;
+    }
+    #content {
+        border-left-width: 0;
+    }
+    .s-prose blockquote {
+        color: var(--blue2);
+    }
+    .s-prose *:not(.s-code-block) > code,
+    code {
+        background-color: var(--dark0);
+        color: var(--blue0);
+    }
+    .hljs {
+        display: block !important;
+        overflow-x: auto !important;
+        padding: 0.5em !important;
+        background: #2e3440 !important;
+    }
+
+    .hljs,
+    .hljs-subst {
+        color: #d8dee9 !important;
+    }
+
+    .hljs-selector-tag {
+        color: #81a1c1 !important;
+    }
+
+    .hljs-selector-id {
+        color: #8fbcbb !important;
+        font-weight: bold !important;
+    }
+
+    .hljs-selector-class {
+        color: #8fbcbb !important;
+    }
+
+    .hljs-selector-attr {
+        color: #8fbcbb !important;
+    }
+
+    .hljs-selector-pseudo {
+        color: #88c0d0 !important;
+    }
+
+    .hljs-addition {
+        background-color: rgba(163, 190, 140, 0.5) !important;
+    }
+
+    .hljs-deletion {
+        background-color: rgba(191, 97, 106, 0.5) !important;
+    }
+
+    .hljs-built_in,
+    .hljs-type {
+        color: #8fbcbb !important;
+    }
+
+    .hljs-class {
+        color: #8fbcbb !important;
+    }
+
+    .hljs-function {
+        color: #88c0d0 !important;
+    }
+
+    .hljs-function > .hljs-title {
+        color: #88c0d0 !important;
+    }
+
+    .hljs-keyword,
+    .hljs-literal,
+    .hljs-symbol {
+        color: #81a1c1 !important;
+    }
+
+    .hljs-number {
+        color: #b48ead !important;
+    }
+
+    .hljs-regexp {
+        color: #ebcb8b !important;
+    }
+
+    .hljs-string {
+        color: #a3be8c !important;
+    }
+
+    .hljs-title {
+        color: #8fbcbb !important;
+    }
+
+    .hljs-params {
+        color: #d8dee9 !important;
+    }
+
+    .hljs-bullet {
+        color: #81a1c1 !important;
+    }
+
+    .hljs-code {
+        color: #8fbcbb !important;
+    }
+
+    .hljs-emphasis {
+        font-style: italic !important;
+    }
+
+    .hljs-formula {
+        color: #8fbcbb !important;
+    }
+
+    .hljs-strong {
+        font-weight: bold !important;
+    }
+
+    .hljs-link:hover {
+        text-decoration: underline !important;
+    }
+
+    .hljs-quote {
+        color: #4c566a !important;
+    }
+
+    .hljs-comment {
+        color: #4c566a !important;
+    }
+
+    .hljs-doctag {
+        color: #8fbcbb !important;
+    }
+
+    .hljs-meta,
+    .hljs-meta-keyword {
+        color: #5e81ac !important;
+    }
+
+    .hljs-meta-string {
+        color: #a3be8c !important;
+    }
+
+    .hljs-attr {
+        color: #8fbcbb !important;
+    }
+
+    .hljs-attribute {
+        color: #d8dee9 !important;
+    }
+
+    .hljs-builtin-name {
+        color: #81a1c1 !important;
+    }
+
+    .hljs-name {
+        color: #81a1c1 !important;
+    }
+
+    .hljs-section {
+        color: #88c0d0 !important;
+    }
+
+    .hljs-tag {
+        color: #81a1c1 !important;
+    }
+
+    .hljs-variable {
+        color: #d8dee9 !important;
+    }
+
+    .hljs-template-variable {
+        color: #d8dee9 !important;
+    }
+
+    .hljs-template-tag {
+        color: #5e81ac !important;
+    }
+
+    .abnf .hljs-attribute {
+        color: #88c0d0 !important;
+    }
+
+    .abnf .hljs-symbol {
+        color: #ebcb8b !important;
+    }
+
+    .apache .hljs-attribute {
+        color: #88c0d0 !important;
+    }
+
+    .apache .hljs-section {
+        color: #81a1c1 !important;
+    }
+
+    .arduino .hljs-built_in {
+        color: #88c0d0 !important;
+    }
+
+    .aspectj .hljs-meta {
+        color: #d08770 !important;
+    }
+
+    .aspectj > .hljs-title {
+        color: #88c0d0 !important;
+    }
+
+    .bnf .hljs-attribute {
+        color: #8fbcbb !important;
+    }
+
+    .clojure .hljs-name {
+        color: #88c0d0 !important;
+    }
+
+    .clojure .hljs-symbol {
+        color: #ebcb8b !important;
+    }
+
+    .coq .hljs-built_in {
+        color: #88c0d0 !important;
+    }
+
+    .cpp .hljs-meta-string {
+        color: #8fbcbb !important;
+    }
+
+    .css .hljs-built_in {
+        color: #88c0d0 !important;
+    }
+
+    .css .hljs-keyword {
+        color: #d08770 !important;
+    }
+
+    .diff .hljs-meta {
+        color: #8fbcbb !important;
+    }
+
+    .ebnf .hljs-attribute {
+        color: #8fbcbb !important;
+    }
+
+    .glsl .hljs-built_in {
+        color: #88c0d0 !important;
+    }
+
+    .groovy .hljs-meta:not(:first-child) {
+        color: #d08770 !important;
+    }
+
+    .haxe .hljs-meta {
+        color: #d08770 !important;
+    }
+
+    .java .hljs-meta {
+        color: #d08770 !important;
+    }
+
+    .ldif .hljs-attribute {
+        color: #8fbcbb !important;
+    }
+
+    .lisp .hljs-name {
+        color: #88c0d0 !important;
+    }
+
+    .lua .hljs-built_in {
+        color: #88c0d0 !important;
+    }
+
+    .moonscript .hljs-built_in {
+        color: #88c0d0 !important;
+    }
+
+    .nginx .hljs-attribute {
+        color: #88c0d0 !important;
+    }
+
+    .nginx .hljs-section {
+        color: #5e81ac !important;
+    }
+
+    .pf .hljs-built_in {
+        color: #88c0d0 !important;
+    }
+
+    .processing .hljs-built_in {
+        color: #88c0d0 !important;
+    }
+
+    .scss .hljs-keyword {
+        color: #81a1c1 !important;
+    }
+
+    .stylus .hljs-keyword {
+        color: #81a1c1 !important;
+    }
+
+    .swift .hljs-meta {
+        color: #d08770 !important;
+    }
+
+    .vim .hljs-built_in {
+        color: #88c0d0 !important;
+        font-style: italic !important;
+    }
+
+    .yaml .hljs-meta {
+        color: #d08770 !important;
+    }
+}
