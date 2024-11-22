@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Noz.vn
 @namespace      github.com/openstyles/stylus
-@version        0.2.3
+@version        0.2.4
 @description    A modern look for Voz.vn based on Nord colorscheme
 @author         ErogeMaster225
 @updateURL      https://github.com/ErogeMaster225/Styles-Gate/raw/main/Noz.vn.user.css
@@ -38,6 +38,9 @@
         font-family: "Readex Pro";
         font-weight: 500;
     }
+    .p-pageWrapper {
+        margin-bottom: 0;
+    }
     .p-footer, /* footer */
     .message--quickReply .message-cell.message-cell--user,
     body[data-template="thread_view"] .p-body-sidebarCol, /* sidebar in thread */
@@ -45,6 +48,7 @@
     .message-userArrow, /* arrow on message box */
     .p-sectionLinks,
     .contentRow-fader,
+    i[class*="fa--xf"] > svg,
 	ins.adsbygoogle {
         display: none !important;
     }
@@ -125,6 +129,7 @@
     .pageNav-page {
         background: var(--dark3);
         color: var(--white0);
+        border-width: 0;
     }
     .pageNav-page.pageNav-page--current {
         background: var(--red);
@@ -134,6 +139,7 @@
     .pageNav-jump {
         background: var(--white0);
         color: var(--dark3);
+        border: none;
     }
     .p-nav,
     .p-header {
@@ -458,6 +464,9 @@
                                                     *                  *
                                                     ********************
     */
+    .p-title-value {
+        color: var(--white0);
+    }
     .message-cell.message-cell--user {
         flex: 0 0 12%;
     }
@@ -532,6 +541,7 @@
     .block--messages .block-row,
     .block-container {
         border-radius: 16px;
+        border-width: 0;
     }
     .block--messages .message-inner:last-of-type .message-cell:first-child {
         border-bottom-left-radius: 16px;
@@ -552,6 +562,12 @@
     }
     .bbWrapper span[style*="0\,\ 0\,\ 0"] {
         color: var(--white0) !important;
+    }
+    .bbWrapper a.link {
+        color: var(--blue1);
+        &:hover {
+            color: var(--orange);
+        }
     }
     .message-attribution.message-attribution--split {
         color: var(--blue1);
@@ -616,6 +632,11 @@
     .structItem-minor a {
         color: var(--white2);
     }
+    .u-concealed > a {
+        &:hover {
+            text-decoration: none !important;
+        }
+    }
     .u-dt[title] {
         color: var(--green);
     }
@@ -679,6 +700,17 @@
         padding: 6px;
         background: var(--dark1);
         border: 2px solid var(--blue1);
+    }
+    .structItem-pageJump,
+    .blockMessage:has(.shareButtons),
+    .p-breadcrumbs.p-breadcrumbs--bottom {
+        display: none;
+    }
+    .block[data-widget-definition="xfes_similar_threads"] {
+        margin-bottom: 0;
+        .block-header {
+            color: var(--white0);
+        }
     }
     /*
                                                     ********************
